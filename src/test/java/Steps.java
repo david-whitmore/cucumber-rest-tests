@@ -5,18 +5,11 @@ import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-import org.junit.Before;
-
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class Steps {
     private int statusCode;
-
-    @Before
-    public void setUp() {
-        statusCode = -1;
-    }
 
     @When("^I send a GET request for (.*)$")
     public void sendGetRequest(String url) throws IOException {
